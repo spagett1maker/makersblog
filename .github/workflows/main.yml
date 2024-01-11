@@ -17,6 +17,10 @@ jobs:
           npm install
           npm i --save-dev gh-pages
           npm run build
-          touch ./out/.nojekyll && gh-pages -d out --dotfiles
-
+          touch ./out/.nojekyll
+      - name: Deploy 🚀
+        uses: peaceiris/actions-gh-pages@v3
+        with:
+          github_token: ${{ secrets.deploy_token }}
+          publish_dir: ./out
      
