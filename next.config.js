@@ -1,6 +1,7 @@
 /** @type {import('next').NextConfig} */
 const nextConfig = {
-    basePath: "/makersblog"
+    basePath: "/makersblog",
+    output: 'export',
 }
 
 module.exports = nextConfig
