@@ -15,6 +15,7 @@ jobs:
       - name: Install and Build 🔧
         run: |
           npm install
+          npm i --save-dev gh-pages
           npm run build && touch ./out/.nojekyll && gh-pages -d out --dotfiles
 
       - name: Deploy 🚀
